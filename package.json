@@ -2,6 +2,11 @@
   "name": "met-landing",
   "version": "1.0.0",
   "description": "Responsive landing page for The Metropolitan Museum of Art",
+  "targets": {
+    "default": {
+      "publicUrl": "/MET-landing-portfolio/"
+    }
+  },
   "scripts": {
     "init": "mate-scripts init",
     "start": "mate-scripts start",
