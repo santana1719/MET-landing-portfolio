@@ -1,0 +1,116 @@
+.schedule {
+  padding: 72px 20px 0;
+
+  &__titles {
+    margin-bottom: 32px;
+  }
+
+  &__label {
+    margin: 0 0 2px;
+    color: $accent-color;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 17px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+  }
+
+  &__museums {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__museum {
+    display: grid;
+    grid-template-columns: minmax(95px, max-content) minmax(0, 1fr);
+    column-gap: 20px;
+    align-items: start;
+  }
+
+  &__museum-title {
+    grid-column: 1 / -1;
+    margin: 0 0 16px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  &__line {
+    display: contents;
+  }
+
+  &__time,
+  &__days {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 27px;
+  }
+
+  &__time {
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  &__days {
+    min-width: 0;
+    font-weight: 400;
+  }
+
+  &__closed-title,
+  &__closed-dates {
+    grid-column: 1 / -1;
+  }
+
+  &__closed-title {
+    margin: 8px 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27px;
+  }
+
+  &__closed-dates {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+
+  @include tablet-and-up {
+    display: grid;
+    grid-template-columns: 288px 288px;
+    column-gap: 24px;
+    align-items: start;
+    padding: 120px 72px 0;
+
+    &__titles {
+      width: 288px;
+      margin: 0;
+    }
+
+    &__title {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+
+  @include desktop {
+    box-sizing: border-box;
+    grid-template-columns: 411px 498px;
+    column-gap: 111px;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 140px 120px 0;
+
+    &__titles {
+      width: 411px;
+    }
+  }
+}

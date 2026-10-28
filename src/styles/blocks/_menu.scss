@@ -1,0 +1,177 @@
+html:has(.page__menu:target),
+.page:has(.page__menu:target) {
+  overflow: hidden;
+}
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden auto;
+  background-color: $accent-color;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+
+  &:target {
+    transform: translateX(0);
+  }
+
+  &__top {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px;
+    background-color: $accent-color;
+  }
+
+  &__logo {
+    color: $white-color;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 80%;
+    letter-spacing: -1px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  &__close {
+    display: flex;
+    width: 24px;
+    height: 24px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  &__link {
+    color: $white-color;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $white-color;
+    }
+  }
+
+  &__phones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 32px;
+    padding: 0 20px;
+    gap: 8px;
+  }
+
+  &__phone {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__phone-address {
+    margin: 0;
+    color: $white-color;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27px;
+    text-transform: uppercase;
+  }
+
+  &__phone-number {
+    color: $white-color;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27px;
+    text-decoration: none;
+  }
+
+  &__phone-button {
+    display: inline-block;
+    margin-top: 16px;
+    padding-bottom: 8px;
+    color: $white-color;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid $white-color;
+    transition: border-color 0.3s;
+  }
+
+  @include tablet-and-up {
+    &__top {
+      box-sizing: border-box;
+      width: 600px;
+      margin: 0 auto;
+      padding: 50px 0 0;
+    }
+
+    &__logo {
+      width: 64px;
+      height: 46px;
+    }
+
+    &__close {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__links {
+      box-sizing: border-box;
+      width: 600px;
+      margin: 40px auto 0;
+      padding: 0;
+    }
+
+    &__phones {
+      box-sizing: border-box;
+      width: 600px;
+      margin: 32px auto 0;
+      padding: 0;
+    }
+  }
+
+  @include desktop {
+    &__top {
+      width: 1020px;
+      padding-top: 48px;
+    }
+
+    &__logo {
+      width: 87px;
+      height: 65px;
+      font-size: 40px;
+    }
+
+    &__links {
+      width: 1020px;
+    }
+
+    &__phones {
+      width: 1020px;
+    }
+  }
+}

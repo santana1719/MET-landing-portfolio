@@ -1,0 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Cinzel, serif;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  background-color: $white-color;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: clip;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+
+:where(a, button):focus-visible {
+  outline: 2px solid $accent-color;
+  outline-offset: 3px;
+}
+
+.header a:focus-visible,
+.menu a:focus-visible {
+  outline-color: $white-color;
+  box-shadow: 0 0 0 2px $accent-color;
+}
